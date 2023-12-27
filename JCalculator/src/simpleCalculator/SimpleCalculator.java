@@ -3,16 +3,20 @@ package simpleCalculator;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
-import javax.swing.*;
-
-public class SimpleCalculator {
+public class SimpleCalculator implements ActionListener{
 	
 	private JFrame frame;
 	private JPanel panel;
 	private JTextField textField;
 	private JButton[] numberButtons = new JButton[10];
-	private JButton[] functionsButtons = new JButton[9];
+	private JButton[] functionButtons = new JButton[9];
 	private JButton addBtn, subBtn, mulBtn, divBtn, delBtn, negBtn, eqlBtn, decBtn, clrBtn;
 	private char operator;
 	private double num1 =0, num2 = 0, result = 0;
@@ -38,6 +42,30 @@ public class SimpleCalculator {
 		decBtn = new JButton(".");
 		clrBtn = new JButton("Clr");
 		
+		functionButtons[0] = addBtn;
+		functionButtons[1] = subBtn;
+		functionButtons[2] = mulBtn;
+		functionButtons[3] = divBtn;
+		functionButtons[4] = decBtn;
+		functionButtons[5] = eqlBtn;
+		functionButtons[6] = delBtn;
+		functionButtons[7] = clrBtn;
+		functionButtons[8] = negBtn;
+		
+		for(int i = 0; i < 9; i++) {
+			
+			functionButtons[i].addActionListener(this);
+			functionButtons[i].setFocusable(false);
+			functionButtons[i].setFont(myFont);
+			
+		}
+		
+		for(int i = 0; i < 10; i++) {
+			
+			
+			
+		}
+		
 //		panel = new JPanel();
 //		panel.setBounds(60,100,300,300);
 //		panel.setBackground(Color.red);
@@ -58,4 +86,9 @@ public class SimpleCalculator {
 		frame.setVisible(true);
 		
 	}
+	
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+	
 }
