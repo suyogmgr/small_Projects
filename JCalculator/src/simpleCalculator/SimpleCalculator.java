@@ -20,16 +20,19 @@ public class SimpleCalculator implements ActionListener{
 	private JButton addBtn, subBtn, mulBtn, divBtn, delBtn, negBtn, eqlBtn, decBtn, clrBtn;
 	private char operator;
 	private double num1 =0, num2 = 0, result = 0;
-	private Color mycolor = new Color(10,20,30);
-	private Font myFont = new Font("Times New Roman", Font.PLAIN,28);
+	private Color myColor = new Color(10,20,30);
+	private Font myFont = new Font("Times New Roman", Font.PLAIN,24);
 	
 	public SimpleCalculator() {
 		frame = new JFrame("Calculator");
 		frame.setSize(420,550);
+		frame.getContentPane().setBackground(new Color(10,20,30));
+		
 		
 		textField = new JTextField();
 		textField.setFont(myFont);
 		textField.setBounds(60,25,300,50);
+		textField.setEditable(false);
 		frame.add(textField);
 		
 		addBtn = new JButton("+");
@@ -57,28 +60,56 @@ public class SimpleCalculator implements ActionListener{
 			functionButtons[i].addActionListener(this);
 			functionButtons[i].setFocusable(false);
 			functionButtons[i].setFont(myFont);
+			functionButtons[i].setForeground(Color.YELLOW);
+			functionButtons[i].setBackground(myColor);
 			
 		}
 		
 		for(int i = 0; i < 10; i++) {
 			
-			
+			numberButtons[i] = new JButton(String.valueOf(i));
+			numberButtons[i].setFont(myFont);
+			numberButtons[i].setFocusable(false);
+			numberButtons[i].addActionListener(this);
+			numberButtons[i].setForeground(Color.YELLOW);
+			numberButtons[i].setBackground(myColor);
 			
 		}
 		
-//		panel = new JPanel();
-//		panel.setBounds(60,100,300,300);
-//		panel.setBackground(Color.red);
-//		panel.setLayout(new GridLayout(2,2,20,20));
-//		panel.add(addBtn);
-//		panel.add(subBtn);
-//		panel.add(negBtn);
-//		panel.add(clrBtn);
-//		panel.add(decBtn);
-//		panel.add(eqlBtn);
-//		frame.add(panel);
+		//frame left don't forget
+		negBtn.setBounds(60,430,100,50);
+		frame.add(negBtn);
+		delBtn.setBounds(160,430,100,50);
+		frame.add(delBtn);
+		clrBtn.setBounds(260,430,100,50);
+		frame.add(clrBtn);
 		
 		
+		//panels for now
+		panel = new JPanel();
+		panel.setBounds(60,100,300,300);
+		panel.setFont(myFont);		 
+		panel.setLayout(new GridLayout(4,4,10,10)); //row,column,horizontal and vertical gap
+		panel.setBackground(Color.BLACK);
+		
+		panel.add(numberButtons[1]);
+		panel.add(numberButtons[2]);
+		panel.add(numberButtons[3]);
+		panel.add(addBtn);
+		panel.add(numberButtons[4]);
+		panel.add(numberButtons[5]);
+		panel.add(numberButtons[6]);
+		panel.add(subBtn);
+		panel.add(numberButtons[7]);
+		panel.add(numberButtons[8]);
+		panel.add(numberButtons[9]);
+		panel.add(mulBtn);
+		panel.add(decBtn);
+		panel.add(numberButtons[0]);
+		panel.add(eqlBtn);
+		panel.add(divBtn);
+		
+		frame.add(panel);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setLayout(null);
