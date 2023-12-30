@@ -126,6 +126,21 @@ public class SimpleCalculator implements ActionListener{
 			}
 		}
 		
+		if(e.getSource() == decBtn) {	 	
+			textField.setText(textField.getText().concat("."));
+		}
+		
+		if(e.getSource() == addBtn) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '+';
+			textField.setText("");
+		}
+		
+		if(e.getSource() == subBtn) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '-';
+			textField.setText(" ");
+		}
 	}
 	
 }
