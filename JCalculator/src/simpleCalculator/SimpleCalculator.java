@@ -139,7 +139,66 @@ public class SimpleCalculator implements ActionListener{
 		if(e.getSource() == subBtn) {
 			num1 = Double.parseDouble(textField.getText());
 			operator = '-';
-			textField.setText(" ");
+			textField.setText("");
+		}
+		
+		if(e.getSource() == mulBtn) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '*';
+			textField.setText("");
+		}
+		
+		if(e.getSource() == divBtn) {
+			num1 = Double.parseDouble(textField.getText());
+			operator = '/';
+			textField.setText("");
+		}
+		
+		if(e.getSource() == eqlBtn) {
+			num2 = Double.parseDouble(textField.getText());
+			
+			switch(operator) {
+			
+			case '+':
+				result = num1 + num2;
+				break;
+			
+			case '-':
+				result = num1 - num2;
+				break;
+				
+			case '*':
+				result = num1 * num2;
+				break;
+				
+			case '/':
+				result = num1 / num2;
+				break;
+			}
+			textField.setText(String.valueOf(result));
+			num1 = result;
+		}
+		
+		if(e.getSource() == clrBtn) {
+			textField.setText("");
+		}
+		
+		if(e.getSource() == delBtn) {
+			String temp = textField.getText();
+			textField.setText("");
+			
+			for(int i = 0; i<temp.length()-1; i++) {
+				textField.setText(textField.getText()+temp.charAt(i));
+			}
+			
+		}
+		
+		if(e.getSource() == negBtn) {
+			double temp1 = Double.parseDouble(textField.getText());
+			
+			temp1 *= -1;
+			
+			textField.setText(String.valueOf(temp1));
 		}
 	}
 	
