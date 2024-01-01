@@ -33,6 +33,7 @@ public class SimpleCalculator implements ActionListener{
 		textField.setFont(myFont);
 		textField.setBounds(60,25,300,50);
 		textField.setEditable(false);
+		//textField.setBackground(myColor);
 		frame.add(textField);
 		
 		addBtn = new JButton("+");
@@ -76,7 +77,7 @@ public class SimpleCalculator implements ActionListener{
 			
 		}
 		
-		//frame left don't forget
+		
 		negBtn.setBounds(60,430,100,50);
 		frame.add(negBtn);
 		delBtn.setBounds(160,430,100,50);
