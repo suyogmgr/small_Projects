@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-section {
+  background-color: rgb(26, 31, 51);
+  max-width: 350px;
+  border-radius: 7px;
+}
+
+.display {
+  width: 100%;
+  background-color: rgb(26, 31, 51);
+  padding: 20px;
+  font-size: 5rem;
+
+  border-radius: 6px;
+}
+
+.extra-keys {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.extra-keys button {
+  font-size: 14px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(26, 31, 51);
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 4px;
+}
+
+button {
+  height: 50px;
+  border: none;
+  background-color: rgb(53, 58, 78);
+  color: #ffff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.equal-btn {
+  background-color: aqua;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.extra-keys button:hover {
+  background-color: rgb(53, 58, 78);
+}
