@@ -72,12 +72,13 @@ body {
   border-radius: 7px;
 }
 
-.display {
+#display {
   width: 100%;
   background-color: rgb(26, 31, 51);
   padding: 20px;
   font-size: 5rem;
-
+  text-align: right;
+  color: #fff;
   border-radius: 6px;
 }
 
